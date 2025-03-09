@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/signup.css">
+    <title>Sign up</title>
+</head>
+
+<body onload="isLoggedIn()">
+    <div class="login-section">
+        <div class="login-container">
+            <h1>Welcome to KC Adventure</h1>
+            <h1>Sign up</h1>
+            <input type="text" id="name" placeholder="Name" />
+            <input type="text" id="username" placeholder="Username" />
+            <input type="password" id="password" placeholder="Password" />
+            <button onclick="signup()">Sign up</button>
+            <a href="./index.html">Already have an account ? Login</a>
+        </div>
+
+        <div class="login-img-container">
+            <img
+                src="../images/signup.jpg" />
+        </div>
+        <div id="ui-blocker"></div>
+        <div id="snackbar"></div>
+    </div>
+    <script src="../js/signup.js"></script>
+    <script src="../js/utils.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/admin-property.css">
+    <title>Properties</title>
+</head>
+
+<body onload="getProperties()">
+    <div class="property-section">
+
+        <div class="sidebar">
+            <h1>Camp Sites</h1>
+
+            <p class="active-menu">Properties</p>
+            <p class="menu" onclick="goToAdminBookings()">Bookings</p>
+
+            <p onclick="logout()" class="menu"
+                style="position: absolute; left: 20px; bottom: 20px; width: calc(100% - 40px);">Logout</p>
+        </div>
+
+        <div class="property-container">
+
+            <div class="header">
+                <h1>Your Properties</h1>
+                <button onclick="openModal()">Add Property</button>
+            </div>
+
+            <div id="property-main" class="property-grid"></div>
+        </div>
+
+        <div id="modal" class="add-property-modal">
+            <div class="add-container">
+                <div
+                    style="display: flex; align-items: center;justify-content: space-between; width: 100%; margin-bottom: 20px;">
+                    <h1>Add Property</h1>
+                    <p onclick="closeModal()" style="cursor: pointer;">Close</p>
+                </div>
+
+                <input id="name" type="text" placeholder="Name" />
+                <input id="place" type="text" placeholder="Location" />
+                <input id="rent" type="number" placeholder="Rent Amount" />
+                <input id="advance" type="number" placeholder="Advance Amount" />
+                <button onclick="addProperty()">Add</button>
+            </div>
+        </div>
+
+        <div id="update-modal" class="add-property-modal">
+            <div class="add-container">
+                <div
+                    style="display: flex; align-items: center;justify-content: space-between; width: 100%; margin-bottom: 20px;">
+                    <h1>Update Property</h1>
+                    <p onclick="closeUModal()" style="cursor: pointer;">Close</p>
+                </div>
+
+                <input id="uname" type="text" placeholder="Name" />
+                <input id="uplace" type="text" placeholder="Location" />
+                <input id="urent" type="number" placeholder="Rent Amount" />
+                <input id="uadvance" type="number" placeholder="Advance Amount" />
+                <button onclick="updateProperty()">Update</button>
+            </div>
+        </div>
+        <div id="ui-blocker"></div>
+        <div id="snackbar"></div>
+    </div>
+
+
+    <script src="../js/admin-property.js"></script>
+    <script src="../js/utils.js"></script>
+
+</body>
+
+</html>

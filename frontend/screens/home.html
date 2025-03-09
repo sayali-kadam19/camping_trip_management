@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <title>Home</title>
+</head>
+
+<body onload="getProperties()">
+    <div class="home-section">
+        <div class="top-menu">
+            <h1>Camp sites</h1>
+            <div style="display: flex; align-items: center;">
+                <p style="padding: 8px 15px;background-color: teal;border-radius: 50px;color: white;cursor: pointer;"
+                    onclick="goToBooking()">
+                    Bookings</p>
+                <p style="padding: 8px 15px;background-color: #ebebeb;border-radius: 50px;color: black;margin-left: 10px; cursor: pointer;"
+                    onclick="logout()">
+                    Logout</p>
+            </div>
+        </div>
+
+        <div class="header">
+            <input id="property-input" type="text" placeholder="Search" oninput="searchProperties()" />
+        </div>
+
+        <div id="home-main" class="rental-card-section">
+
+        </div>
+
+        <div id="ui-blocker"></div>
+        <div id="snackbar"></div>
+    </div>
+    <script src="../js/utils.js"></script>
+    <script src="../js/home.js"></script>
+    <script>
+        function goToBooking() {
+            window.location.href = "./bookings.html";
+        }
+    </script>
+</body>
+
+</html>

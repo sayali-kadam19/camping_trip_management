@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/login.css">
+    <title>Login</title>
+</head>
+
+<body onload="isLoggedIn()">
+    <div class="login-section">
+
+        <div class="login-img-container">
+            <img
+                src="../images/login.jpg" />
+        </div>
+
+        <div class="login-container">
+            <h1>Welcome to KC Adventure</h1>
+            <h1>Login</h1>
+            <input id="username" type="text" placeholder="Username" />
+            <input id="password" type="password" placeholder="Password" />
+            <button onclick="login()">Login</button>
+
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <p>User</p>
+                <label class="switch">
+                    <input type="checkbox" id="user-type" oninput="changeUserType(evt)">
+                    <span class="slider"></span>
+                </label>
+                <p>Owner</p>
+            </div>
+            <a href="./signup.html">Don't have an account ? Sign up</a>
+        </div>
+
+        <div id="ui-blocker"></div>
+        <div id="snackbar"></div>
+    </div>
+    <script src="../js/login.js"></script>
+    <script src="../js/utils.js"></script>
+</body>
+
+</html>

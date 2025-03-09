@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/admin-bookings.css">
+    <title>Bookings</title>
+</head>
+
+<body onload="getSchedulingsById()">
+    <div class="property-section">
+
+        <div class="sidebar">
+            <h1>Camp Sites</h1>
+
+            <p class="menu" onclick="goToProperty()">Properties</p>
+            <p class="active-menu">Bookings</p>
+
+            <p onclick="logout()" class="menu"
+                style="position: absolute; left: 20px; bottom: 20px; width: calc(100% - 40px);">Logout</p>
+        </div>
+
+        <div class="property-container">
+
+            <div class="header">
+                <h1>Bookings</h1>
+            </div>
+
+            <div id="schedule-main" class="property-grid">
+            </div>
+        </div>
+        <div id="ui-blocker"></div>
+        <div id="snackbar"></div>
+    </div>
+
+
+    <script src="../js/admin-bookings.js"></script>
+    <script src="../js/utils.js"></script>
+
+</body>
+
+</html>
